@@ -14,8 +14,6 @@ export default class Message extends React.Component {
 
   onClick(e) {
     e.preventDefault();
-    console.log("click remove");
-
     this.props.onRemove(this.props.element);
   }
 

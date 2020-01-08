@@ -19,13 +19,6 @@ export default class MessagePreview extends React.Component {
     );
     return { message };
   }
-  // Лучше использовать то что сверху
-  // componentWillMount() {
-  //   const message = this.props.messages.find(
-  //     mess => mess.id === this.props.match.params.messageId
-  //   );
-  //   this.setState({ message });
-  // }
 
   shouldComponentUpdate(nextProps, state) {
     const { messageId: prevId } = this.props.match.params;
@@ -35,7 +28,6 @@ export default class MessagePreview extends React.Component {
       message => message.id === nextId
     );
 
-    console.log(this.props.messages);
 
     if (newMessage) {
       if (prevId !== nextId) {
@@ -50,10 +42,6 @@ export default class MessagePreview extends React.Component {
     }
 
     return true;
-  }
-
-  handleClick() {
-    console.log("click add");
   }
 
   render() {

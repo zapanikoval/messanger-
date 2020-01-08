@@ -26,7 +26,6 @@ class AddPage extends React.Component {
     const item = this.state;
     item.id = `${Date.now()}`;
     this.props.onAddItem(item);
-    console.log(item);
     this.setState({
       id: "",
       subject: "",
@@ -38,7 +37,6 @@ class AddPage extends React.Component {
 
   handleChange(event) {
     const { name, value } = event.target;
-    console.log("Change ", name, "Value: ", value);
     this.setState({
       [name]: value
     });

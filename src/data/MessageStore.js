@@ -22,10 +22,8 @@ class MessageStore extends ReduceStore {
         }
         return state;
       case ActionTypes.REMOVE_ITEM:
-        console.log("ITEM REMOVING");
         let index = state.indexOf(action.text);
 
-        console.log("INDEX?: ", index);
         if (index > -1) {
           return state.delete(index);
         }
